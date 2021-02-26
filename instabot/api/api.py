@@ -417,7 +417,7 @@ class API(object):
     def save_failed_login(self):
         self.logger.info("Username or password is incorrect.")
         delete_credentials(self.base_path)
-        sys.exit()
+        # sys.exit()
 
     def solve_challenge(self):
         challenge_url = self.last_json["challenge"]["api_path"][1:]
