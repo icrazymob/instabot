@@ -37,6 +37,7 @@ setup(
         "mock>=3.0.5",
         "moviepy>=1.0.1",
         "Pillow>=6.2.2",
+        "rsa>=4.0",
         "pytest>=4.6.9",
         "pycryptodome>=3.9.7",
     ],
