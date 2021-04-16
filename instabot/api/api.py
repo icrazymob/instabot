@@ -513,6 +513,7 @@ class API(object):
     ):
         self.set_proxy()  # Only happens if `self.proxy`
         # TODO: fix the request_headers
+        self.session.max_redirects = 1
         self.session.headers.update(config.REQUEST_HEADERS)
         self.session.headers.update({"User-Agent": self.user_agent})
         # print("printing headers", self.session.headers)
