@@ -115,7 +115,8 @@ def creatives_ar_class(self):
 def pre_login_flow(self):
     self.logger.info("Not yet logged in starting: PRE-LOGIN FLOW!")
     # /api/v1/accounts/contact_point_prefill/
-    self.set_contact_point_prefill("prefill", True)
+    # 16.04.21 стала лагать эта тема, выдает 302 на логин
+    # self.set_contact_point_prefill("prefill", True)
 
     # /api/v1/qe/sync (server_config_retrieval)
     self.sync_device_features(True)
@@ -124,7 +125,7 @@ def pre_login_flow(self):
     self.sync_launcher(True)
 
     # /api/v1/accounts/get_prefill_candidates
-    self.get_prefill_candidates(True)
+    # self.get_prefill_candidates(True)
 
 
 # DO NOT MOVE ANY OF THE ENDPOINTS THEYRE IN THE CORRECT ORDER
