@@ -120,7 +120,7 @@ def pre_login_flow(self):
 
     # /api/v1/qe/sync (server_config_retrieval)
     # 21.04.21 стала лагать эта тема, выдает conection refused
-    self.sync_device_features(True)
+    # self.sync_device_features(True)
 
     # /api/v1/launcher/sync/ (server_config_retrieval)
     self.sync_launcher(True)
