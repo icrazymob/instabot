@@ -145,8 +145,9 @@ def login_flow(self, just_logged_in=False, app_refresh_interval=1800):
             # /api/v1/zr/token/result/?device_id=android-f14b9731e4869eb&token_hash=&custom_device_id=f3119c98-5663-4c47-95b5-a63b140a2b62&fetch_reason=token_expired
             check_flow.append(self.get_zr_token_result())
 
+            # 21.04.21 стала лагать эта тема, выдает conection refused
             # /api/v1/qe/sync/ (server_config_retrieval)
-            check_flow.append(self.sync_device_features(False))
+            # check_flow.append(self.sync_device_features(False))
 
             # AFTER SYNC
             # /api/v1/banyan/banyan/?views=%5B%22story_share_sheet%22%2C%22threads_people_picker%22%2C%22group_stories_share_sheet%22%2C%22reshare_share_sheet%22%5D
