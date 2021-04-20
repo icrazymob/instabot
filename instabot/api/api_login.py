@@ -275,8 +275,8 @@ def login_flow(self, just_logged_in=False, app_refresh_interval=1800):
                 check_flow.append(self.get_profile_notice())
                 check_flow.append(self.explore(False))
 
-            if (time.time() - self.last_experiments) > 7200:
-                check_flow.append(self.sync_device_features())
+            # if (time.time() - self.last_experiments) > 7200:
+            #     check_flow.append(self.sync_device_features())
         except Exception as e:
             self.logger.error(
                 "Error loginin, exception raised: {}\n{}".format(
