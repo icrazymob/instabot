@@ -119,6 +119,7 @@ def pre_login_flow(self):
     # self.set_contact_point_prefill("prefill", True)
 
     # /api/v1/qe/sync (server_config_retrieval)
+    # 21.04.21 стала лагать эта тема, выдает conection refused
     self.sync_device_features(True)
 
     # /api/v1/launcher/sync/ (server_config_retrieval)
