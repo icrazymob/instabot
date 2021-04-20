@@ -534,10 +534,10 @@ class API(object):
                     if extra_sig is not None and extra_sig != []:
                         post += "&".join(extra_sig)
                 # time.sleep(random.randint(1, 2))
-                response = self.session.post(config.API_URL + endpoint, data=post)
+                response = self.session.post(config.API_URL + endpoint, data=post, verify=False)
             else:  # GET
                 # time.sleep(random.randint(1, 2))
-                response = self.session.get(config.API_URL + endpoint)
+                response = self.session.get(config.API_URL + endpoint, verify=False)
         except Exception as e:
             self.logger.warning(str(e))
             return False
